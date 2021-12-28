@@ -74,11 +74,6 @@ String password = "admin123";
             </form>&ensp;
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <form method="post" action="${pageContext.request.contextPath}/show-bookings.jsp">
-                <button type="submit" class="btn btn-success mb-2 btn-block">Previous bookings</button>
-            </form>&ensp;
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <form method="post" action="${pageContext.request.contextPath}/login.jsp">
                 <button type="submit" class="btn mb-2 btn-danger btn-block">Logout</button>
             </form>
