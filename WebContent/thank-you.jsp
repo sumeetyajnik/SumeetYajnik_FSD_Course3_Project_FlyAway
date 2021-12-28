@@ -55,7 +55,7 @@
         <p><button onclick="window.print()" class="btn btn-success btn-block" >Print Ticket</button></p>
         <br>
         <h3>Ticket Summary</h3>
-        <h4><strong><%=Search.source%> to <%=Search.destination%> | <%=Search.date%> (<%=Search.day%>)</strong></h4>
+        <h4><strong><%=Search.source%> to <%=Search.destination%> | <%=Search.date%></strong></h4>
         <p align="left"><%=Booking.flight_booking_id%> - <%=Booking.flight_name%> (Travellers <%=Search.persons%>)</p><br>
         <br>
         <h3><strong>Passenger Summary</strong></h3>

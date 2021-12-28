@@ -26,7 +26,6 @@ public class SearchServlet extends HttpServlet {
         }
         else {
         	try {
-            Search.day = getDay(Search.date);
             resp.sendRedirect("search-results.jsp");
         	} catch (Exception ex) {
         		 PrintWriter out = resp.getWriter();
@@ -35,8 +34,4 @@ public class SearchServlet extends HttpServlet {
         }
     }
 
-    public String getDay(String dateInp) {
-        LocalDate dt = LocalDate.parse(dateInp);
-        return dt.getDayOfWeek().toString();
-    }
 }

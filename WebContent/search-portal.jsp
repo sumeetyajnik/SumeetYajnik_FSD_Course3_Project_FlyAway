@@ -48,23 +48,21 @@
         <section class="col-sm-6 col-md-3">
             <form action="search" class="form-container">
                 <div class="form-group">
-                    <label for="date">Date (yyyy-MM-dd)</label>
+                    <label for="date">Date of travel (yyyy-MM-dd)</label>
                     <input type="date"  class="form-control" id="date" name="date" placeholder="Travel Date..">
                 </div>
                 <div class="form-group">
-                    <label for="source">Source</label>
+                    <label for="source">Source City</label>
                     <select  class="form-control" id="source" name="source">
-                        <option value="India">India</option>
-                        <option value="USA">USA</option>
-                        <option value="UK">UK</option>
+                        <option value="New Delhi India">New Delhi India</option>
+                        <option value="USA">Bangalore India</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="destination">Destination</label>
+                    <label for="destination">Destination City</label>
                     <select  class="form-control" id="destination" name="destination">
-                        <option value="USA">USA</option>
-                        <option value="UK">UK</option>
-                        <option value="India">India</option>
+                        <option value="Seattle US">Seattle US</option>
+                        <option value="Singapore">Singapore</option>
                     </select>
                 </div>
                 <div>

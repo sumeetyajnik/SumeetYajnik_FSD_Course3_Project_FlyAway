@@ -54,8 +54,8 @@
         <section class="row justify-content-center">
             <div class="row">
                 <div class="col">
-                    <h1 align="center" style="color:whitesmoke;"><b>Checkout</b></h1>
-                    <p align="center" style="color:whitesmoke;"><span><strong>Enter Payment Details</strong></span></p><br>
+                    <h1 align="center" style="color:black;"><b>Checkout</b></h1>
+                    <p align="center" style="color:black;"><span><strong>Enter Payment Details</strong></span></p><br>
                 </div>
             </div>
            <section class="col-sm-6 col-md-3">
@@ -69,7 +69,7 @@
                        <input type="number" class="form-control" id="card_details" name="card_details" placeholder="Enter Card Number">
                    </div>
                    <br>
-                   <p align="left"><span><strong>Total fare = <br> <%=Booking.ticket_price%> X <%=Search.persons%> persons = Rs.<%=Booking.ticket_price*Search.persons%></strong></span></p>
+                   <p align="left"><span><strong>Total fare = <br> <%=Booking.ticket_price%> X <%=Search.persons%> persons = Rs.<%=Search.persons*Booking.ticket_price%></strong></span></p>
                    <button type="submit" class="btn btn-success btn-block" value="Submit">Confirm Payment</button>
                </form>
           </section>

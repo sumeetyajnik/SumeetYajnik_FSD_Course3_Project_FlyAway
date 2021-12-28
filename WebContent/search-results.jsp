@@ -58,16 +58,21 @@
     <h2 align="center"><span><strong>Search Results</strong></span></h2>
     <p align="center"><span><strong>
         Showing available flights from <%=Search.source%> to  <%=Search.destination%> <br>
-        Date of travel : <%=Search.date%> (<%=Search.day%>)  <br>
+        Date of travel : <%=Search.date%> (<%=Search.date%>)  <br>
         No of travellers :  <%=Search.persons%>  <br>
     </p>
     <table class="table table-hover table-striped">
         <thead>
         <tr>
-            <th scope="col">Flight</th>
-            <th scope="col">Source</th>
-            <th scope="col">Destination</th>
-            <th scope="col">Date</th>
+            <th scope="col">Flight name</th>
+            <th scope="col">Flight number</th>
+            <th scope="col">Class</th>
+            <th scope="col">Date of travel</th>
+            <th scope="col">Source City</th>
+            <th scope="col">Destination City</th>
+            <th scope="col">Departure time</th>
+            <th scope="col">Arrival time</th>
+            <th scope="col">Seat available</th>
             <th scope="col">Ticket Price</th>
             <th scope="col">Select</th>
         </tr>
@@ -82,14 +87,19 @@
                 while(resultSet.next()){
         %>
         <tr bgcolor="#F5F5F5">
-            <td><%=resultSet.getString("name") %></td>
+            <td><%=resultSet.getString("flight_name") %></td>
+            <td><%=resultSet.getString("flight_number") %></td>
+            <td><%=resultSet.getString("class") %></td>
+            <td><%=resultSet.getString("date_of_travel") %></td>
             <td><%=resultSet.getString("source") %></td>
             <td><%=resultSet.getString("destination") %></td>
-            <td><%=Search.date%></td>
-            <td><%=resultSet.getString("ticket_price") %></td>
+            <td><%=resultSet.getString("departure_time") %></td>
+            <td><%=resultSet.getString("arival_time") %></td>
+            <td><%=resultSet.getString("seat_availibility") %></td>
+            <td><%=resultSet.getInt("ticket_price") %></td>
             <td>
                 <form action="${pageContext.request.contextPath}/booking-details.jsp" method="post">
-                    <input type="hidden" id="name" name="name" value="<%=resultSet.getString("name")%>">
+                    <input type="hidden" id="flight_name" name="flight_name" value="<%=resultSet.getString("flight_name")%>">
                     <input type="hidden" id="ticket_price" name="ticket_price" value="<%=resultSet.getString("ticket_price")%>">
                     <input type="hidden" id="flight_id" name="flight_id" value="<%=resultSet.getString("flight_id")%>">
                     <input type="submit" class="btn btn-success" value="Book This Flight">

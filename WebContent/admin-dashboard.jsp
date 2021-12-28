@@ -74,11 +74,6 @@ String password = "admin123";
             </form>&ensp;
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <form method="post" action="${pageContext.request.contextPath}/add-flight.jsp">
-                <button type="submit" class="btn btn-success mb-2 btn-block">Add new Flight</button>
-            </form>&ensp;
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <form method="post" action="${pageContext.request.contextPath}/show-bookings.jsp">
                 <button type="submit" class="btn btn-success mb-2 btn-block">Previous bookings</button>
             </form>&ensp;
@@ -120,11 +115,11 @@ String password = "admin123";
                         while(resultSet.next()){
                 %>
                 <tr>
-                    <td><%=resultSet.getString("flight_id") %></td>
-                    <td><%=resultSet.getString("name") %></td>
+                    <td><%=resultSet.getString("flight_number") %></td>
+                    <td><%=resultSet.getString("flight_name") %></td>
                     <td><%=resultSet.getString("source") %></td>
                     <td><%=resultSet.getString("destination") %></td>
-                    <td><%=resultSet.getString("days") %></td>
+                    <td><%=resultSet.getString("date_of_travel") %></td>
                     <td><%=resultSet.getString("ticket_price") %></td>
                 </tr>
                 <%
